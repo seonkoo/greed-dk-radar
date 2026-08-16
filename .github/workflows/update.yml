@@ -1,23 +1,18 @@
-name: 更新贪婪+DK雷达
+name: 更新贪婪指数雷达
 
 on:
   # 交易时段每 30min 跑（北京时 09:00–15:30，UTC 01:00–07:30，工作日）
   schedule:
     - cron: "0,30 1-7 * * 1-5"
-  # 你一提交东方财富 DK 导出 CSV 即重算（=落盘即触发）；仅匹配 data/dk/** 路径
-  push:
-    paths:
-      - "data/dk/**"
   # 手动按钮
   workflow_dispatch:
 
 # 并发锁：同一时刻只允许一个 run；新 run 排队等待，绝不重叠（参考 GitHub 提交铁律，防雪崩）
 concurrency:
-  group: greed-dk-update
+  group: greed-update
   cancel-in-progress: false
 
 permissions:
-  contents: write      # 回写 DK 状态文件 data/dk_state.json（跨 run 持久化）
   pages: write         # 部署到 GitHub Pages
   id-token: write      # OIDC（deploy-pages 所需）
 
@@ -27,8 +22,6 @@ jobs:
     steps:
       - name: 检出
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true   # 允许后续 git commit 回写状态
 
       - name: 配置 Python
         uses: actions/setup-python@v5
@@ -38,22 +31,10 @@ jobs:
       - name: 安装依赖
         run: pip install -r requirements.txt
 
-      - name: 生成 data.json（取数→加载→检测→筛选→聚合→写盘）
+      - name: 生成 data.json（取数→筛选→聚合→写盘）
         env:
           ARKVOL_API_KEY: ${{ secrets.ARKVOL_API_KEY }}
         run: python src/main.py
-
-      - name: 回写 DK 状态（仅状态文件，跨 run 持久化变换检测）
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/dk_state.json
-          if git diff --cached --quiet; then
-            echo "DK 状态无变化，跳过提交"
-          else
-            git commit -m "chore: 更新 DK 状态 [skip ci]"
-            git push
-          fi
 
       - name: 上传 Pages 产物（site/ 目录）
         uses: actions/upload-pages-artifact@v3

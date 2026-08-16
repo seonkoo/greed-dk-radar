@@ -11,19 +11,10 @@
     "base_url": "https://arkvol.com",
     "skill_version": "0.3.1"
   },
-  "dk": {
-    "csv_folder": "data/dk",
-    "state_file": "data/dk_state.json",
-    "signal_map": {
-      "D": "买点",
-      "K": "卖点"
-    }
-  },
   "alert": {
     "channels": ["dashboard"],
     "webhook_url": null,
-    "webhook_levels": ["opportunity", "risk", "warning", "info"],
-    "only_dk": false
+    "webhook_levels": ["opportunity", "risk", "warning", "info"]
   },
   "schedule": {
     "cron_minutes": 30,

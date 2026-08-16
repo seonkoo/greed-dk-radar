@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T10:34:52.287944+08:00",
+  "generated_at": "2026-08-16T11:59:49.568951+08:00",
   "greed": {
     "available": true,
     "data_date": "2026-08-14",
@@ -158,10 +158,6 @@
     ],
     "risks": []
   },
-  "dk": {
-    "events": [],
-    "latest": {}
-  },
   "alerts": [
     {
       "level": "info",
@@ -270,8 +266,7 @@
     }
   ],
   "sources": [
-    "arkvol 贪婪指数（alla, alla-tech, funds-greed）",
-    "东方财富 DK 买卖点（人工导出 CSV）"
+    "arkvol 贪婪指数（alla, alla-tech, funds-greed）"
   ],
-  "disclaimer": "信号来自 arkvol 贪婪指数与东方财富 DK 标记，仅供参考，非投资建议；arkvol 数据仅用于机会发现，不构成买入/卖出推荐。DK 买卖点为东方财富 App 图表信号，由用户人工导出，工具仅做变换识别，不代表任何交易建议。"
+  "disclaimer": "信号来自 arkvol 贪婪指数，仅供参考，非投资建议；arkvol 数据仅用于机会发现（ETF/指数/基金样本分位），不构成买入/卖出推荐。"
 }

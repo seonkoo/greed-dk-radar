@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>贪婪指数 & DK 买卖点雷达</title>
+  <title>贪婪指数雷达</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <h1>贪婪指数 &amp; DK 买卖点雷达</h1>
+      <h1>贪婪指数雷达</h1>
       <div class="meta">
         <span id="greed-badge" class="badge badge-neutral">数据加载中…</span>
         <span class="muted">生成于 <span id="gen-time">—</span></span>
@@ -19,7 +19,7 @@
 
   <!-- 合规提示：机会区本质为 ETF/指数/基金样本分位，非个股荐股 -->
   <div id="compliance-banner" class="compliance-banner">
-    信号来自 arkvol 贪婪指数与东方财富 DK 标记，仅供参考、非投资建议；arkvol 数据仅用于机会发现，不构成买入/卖出推荐。
+    信号来自 arkvol 贪婪指数，仅供参考、非投资建议；arkvol 数据仅用于机会发现（ETF/指数/基金样本），不构成买入/卖出推荐。
   </div>
 
   <main class="container">
@@ -78,29 +78,6 @@
       </div>
     </section>
 
-    <!-- DK 事件流 -->
-    <section class="card">
-      <h2>DK 买卖点变换事件流 <span class="sub">由东方财富导出 CSV 识别</span></h2>
-      <ul id="dk-events" class="dk-list">
-        <li class="muted">暂无事件（请将东方财富 DK 导出 CSV 放入 data/dk/ 后重跑）</li>
-      </ul>
-    </section>
-
-    <!-- DK 当前状态 -->
-    <section class="card">
-      <h2>DK 当前状态 <span class="sub">各标的最后已知信号</span></h2>
-      <div class="table-wrap">
-        <table id="dk-latest-table">
-          <thead>
-            <tr><th>代码</th><th>名称</th><th>信号</th><th>日期</th><th>收盘</th></tr>
-          </thead>
-          <tbody id="dk-latest">
-            <tr><td colspan="5" class="muted">暂无数据</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
     <!-- 来源 -->
     <section class="card sources">
       <h2>数据来源</h2>
@@ -113,7 +90,7 @@
 
   <footer class="footer">
     <p id="disclaimer" class="disclaimer">—</p>
-    <p class="muted">本工具为信号汇总参考，不构成任何投资建议。投资有风险，决策需独立判断。</p>
+    <p class="muted">本工具为信号汇总参考，不构成任何投资建议。投资有风险，决策需独立判断。个股 DK 买卖点请在 dk-tracker 查看。</p>
   </footer>
 
   <noscript>

@@ -1,5 +1,6 @@
 // 仪表盘渲染逻辑：读取 ./data.json 并填充各挂载点
 // 纯前端、零依赖；所有数据均由后端生成器产出，本文件只负责展示。
+// 定位：贪婪指数雷达（arkvol），不含 DK；DK 买卖点在 dk-tracker。
 (function () {
   "use strict";
 
@@ -65,49 +66,6 @@
     });
   }
 
-  // ---------- DK 事件流 ----------
-  function renderDkEvents(events, container) {
-    container.innerHTML = "";
-    if (!events || !events.length) {
-      container.appendChild(el("li", "muted",
-        "暂无事件（请将东方财富 DK 导出 CSV 放入 data/dk/ 后重跑）"));
-      return;
-    }
-    events.forEach(function (e) {
-      var cls = (e.type === "K->D") ? "dk-k2d" : "dk-d2k";
-      var price = (e.price !== null && e.price !== undefined)
-        ? " · 收盘 " + fmtNum(e.price) : "";
-      var date = e.date ? " · " + esc(e.date) : "";
-      var li = el("li", cls,
-        "<b>" + esc(e.name || e.code) + "</b>（" + esc(e.code) + "）" +
-        " " + esc(e.type) + " " + esc(e.note || "") + date + price);
-      container.appendChild(li);
-    });
-  }
-
-  // ---------- DK 当前状态表 ----------
-  function renderDkLatest(latest, container) {
-    container.innerHTML = "";
-    var codes = latest ? Object.keys(latest) : [];
-    if (!codes.length) {
-      container.appendChild(el("tr", null,
-        '<td colspan="5" class="muted">暂无数据</td>'));
-      return;
-    }
-    codes.forEach(function (code) {
-      var s = latest[code] || {};
-      var sigCls = (s.signal === "D") ? "signal-buy" : "signal-sell";
-      var sigText = (s.signal === "D") ? "买点(D)" : "卖点(K)";
-      var tr = el("tr", null,
-        '<td>' + esc(code) + '</td>' +
-        '<td>' + esc(s.name || code) + '</td>' +
-        '<td class="' + sigCls + '">' + sigText + '</td>' +
-        '<td>' + esc(s.date || "—") + '</td>' +
-        '<td>' + fmtNum(s.close) + '</td>');
-      container.appendChild(tr);
-    });
-  }
-
   // ---------- 来源 ----------
   function renderSources(sources, container) {
     container.innerHTML = "";
@@ -139,7 +97,6 @@
   function render(data) {
     if (!data) data = {};
     var greed = data.greed || {};
-    var dk = data.dk || {};
 
     // 生成时间
     $("gen-time").textContent = data.generated_at || "—";
@@ -156,10 +113,6 @@
     // 贪婪机会/风险
     renderGreedTable(greed.opportunities, $("opp-list"));
     renderGreedTable(greed.risks, $("risk-list"));
-
-    // DK
-    renderDkEvents(dk.events, $("dk-events"));
-    renderDkLatest(dk.latest, $("dk-latest"));
 
     // 来源 + 免责
     renderSources(data.sources, $("sources"));

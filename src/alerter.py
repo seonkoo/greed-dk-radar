@@ -41,14 +41,10 @@ def summarize_alerts(alerts):
 def _select(alerts, cfg_alert):
     """按 config 过滤要投递的告警。"""
     levels = cfg_alert.get("webhook_levels") or ["opportunity", "risk", "warning", "info"]
-    only_dk = bool(cfg_alert.get("only_dk", False))
     selected = []
     skipped = 0
     for a in alerts or []:
         if a.get("level") not in levels:
-            skipped += 1
-            continue
-        if only_dk and a.get("source") != "dk":
             skipped += 1
             continue
         selected.append(a)
@@ -123,8 +119,6 @@ if __name__ == "__main__":
     snap = {
         "generated_at": "2026-08-16T08:58:00+08:00",
         "alerts": [
-            {"level": "opportunity", "source": "dk", "text": "贵州茅台(600519.SH) 出现 K->D 买点信号（由卖转买） @ 2026-08-15", "code": "600519.SH", "date": "2026-08-15"},
-            {"level": "risk", "source": "dk", "text": "宁德时代(300750.SZ) 出现 D->K 卖点信号（由买转卖） @ 2026-08-15", "code": "300750.SZ", "date": "2026-08-15"},
             {"level": "info", "source": "greed", "text": "AI人工智能ETF(515030) 贪婪分17.36 进入低吸区（funds-greed）", "code": "515030", "date": None},
             {"level": "warning", "source": "greed", "text": "中证500ETF(510500) 贪婪分84.0 进入风险区/过热（funds-greed）", "code": "510500", "date": None},
         ],

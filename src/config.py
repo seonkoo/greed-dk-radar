@@ -16,11 +16,6 @@ DEFAULTS = {
         "etf_pages": ["funds-greed"],
         "etf_scope": "宽基+行业+主题",
     },
-    "dk": {
-        "csv_folder": "data/dk",
-        "state_file": "data/dk_state.json",
-        "signal_map": {"D": "买点", "K": "卖点"},
-    },
     "alert": {
         "channels": ["dashboard"],
         "webhook_url": None,
