@@ -1,0 +1,20 @@
+# 本地密钥（绝不入库）
+.arkvol/
+arkvol-entry.json
+*.key
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 编辑器 / OS
+.vscode/
+.idea/
+.DS_Store
+
+# 生成产物（本地开发可保留，部署时由 main.py 生成）
+# site/data.json
+
+# 注：data/dk/*.csv 按决策入库（push 即触发重算），此处不忽略

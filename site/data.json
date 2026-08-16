@@ -1,0 +1,277 @@
+{
+  "generated_at": "2026-08-16T10:34:52.287944+08:00",
+  "greed": {
+    "available": true,
+    "data_date": "2026-08-14",
+    "market_state": "中性",
+    "opportunities": [
+      {
+        "code": "512930",
+        "name": "AI人工智能ETF",
+        "score": 17.36,
+        "page": "alla-tech",
+        "close": 0.6538,
+        "gold_pit": true,
+        "low_sentiment": true,
+        "note": "贪婪分17.36 ≤ 机会阈值40（低吸区） · 黄金坑 · 低情绪"
+      },
+      {
+        "code": "515880",
+        "name": "通信ETF",
+        "score": 18.26,
+        "page": "alla-tech",
+        "close": 0.6889,
+        "gold_pit": true,
+        "low_sentiment": true,
+        "note": "贪婪分18.26 ≤ 机会阈值40（低吸区） · 黄金坑 · 低情绪"
+      },
+      {
+        "code": "515050",
+        "name": "5G通信ETF",
+        "score": 24.19,
+        "page": "alla-tech",
+        "close": 1.0721,
+        "gold_pit": true,
+        "low_sentiment": true,
+        "note": "贪婪分24.19 ≤ 机会阈值40（低吸区） · 黄金坑 · 低情绪"
+      },
+      {
+        "code": "588200",
+        "name": "科创芯片ETF",
+        "score": 24.85,
+        "page": "alla-tech",
+        "close": 1.2117,
+        "gold_pit": true,
+        "low_sentiment": true,
+        "note": "贪婪分24.85 ≤ 机会阈值40（低吸区） · 黄金坑 · 低情绪"
+      },
+      {
+        "code": "512480",
+        "name": "半导体ETF",
+        "score": 26.95,
+        "page": "alla-tech",
+        "close": 1.0764,
+        "gold_pit": true,
+        "low_sentiment": true,
+        "note": "贪婪分26.95 ≤ 机会阈值40（低吸区） · 黄金坑 · 低情绪"
+      },
+      {
+        "code": "016848",
+        "name": "中欧高端装备股票发起C",
+        "score": 32.33,
+        "page": "funds-greed",
+        "close": 0.7659,
+        "gold_pit": false,
+        "low_sentiment": false,
+        "note": "贪婪分32.33 ≤ 机会阈值40（低吸区）"
+      },
+      {
+        "code": "025491",
+        "name": "平安中证卫星产业指数C",
+        "score": 32.84,
+        "page": "funds-greed",
+        "close": 0.9506,
+        "gold_pit": false,
+        "low_sentiment": false,
+        "note": "贪婪分32.84 ≤ 机会阈值40（低吸区）"
+      },
+      {
+        "code": "004927",
+        "name": "中航军民融合精选C",
+        "score": 33.37,
+        "page": "funds-greed",
+        "close": 1.0257,
+        "gold_pit": false,
+        "low_sentiment": false,
+        "note": "贪婪分33.37 ≤ 机会阈值40（低吸区）"
+      },
+      {
+        "code": "159227",
+        "name": "航空航天ETF",
+        "score": 35.04,
+        "page": "alla-tech",
+        "close": 1.0253,
+        "gold_pit": false,
+        "low_sentiment": false,
+        "note": "贪婪分35.04 ≤ 机会阈值40（低吸区）"
+      },
+      {
+        "code": "588080",
+        "name": "科创50ETF易方达",
+        "score": 37.59,
+        "page": "alla-tech",
+        "close": 1.7579,
+        "gold_pit": false,
+        "low_sentiment": false,
+        "note": "贪婪分37.59 ≤ 机会阈值40（低吸区）"
+      },
+      {
+        "code": "588000",
+        "name": "华夏科创50 ETF",
+        "score": 37.65,
+        "page": "alla",
+        "close": 1.8134,
+        "gold_pit": false,
+        "low_sentiment": false,
+        "note": "贪婪分37.65 ≤ 机会阈值40（低吸区）"
+      },
+      {
+        "code": "013817",
+        "name": "汇添富中证光伏产业指数增强发起式C",
+        "score": 38.06,
+        "page": "funds-greed",
+        "close": 0.5247,
+        "gold_pit": false,
+        "low_sentiment": false,
+        "note": "贪婪分38.06 ≤ 机会阈值40（低吸区）"
+      },
+      {
+        "code": "020900",
+        "name": "天弘中证全指通信设备指数发起C",
+        "score": 38.57,
+        "page": "funds-greed",
+        "close": 3.5741,
+        "gold_pit": false,
+        "low_sentiment": false,
+        "note": "贪婪分38.57 ≤ 机会阈值40（低吸区）"
+      },
+      {
+        "code": "159949",
+        "name": "创业板50ETF",
+        "score": 39.1,
+        "page": "alla-tech",
+        "close": 1.7124,
+        "gold_pit": false,
+        "low_sentiment": false,
+        "note": "贪婪分39.1 ≤ 机会阈值40（低吸区）"
+      },
+      {
+        "code": "026429",
+        "name": "永赢上证科创板200指数C",
+        "score": 39.95,
+        "page": "funds-greed",
+        "close": 1.034,
+        "gold_pit": false,
+        "low_sentiment": false,
+        "note": "贪婪分39.95 ≤ 机会阈值40（低吸区）"
+      }
+    ],
+    "risks": []
+  },
+  "dk": {
+    "events": [],
+    "latest": {}
+  },
+  "alerts": [
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "AI人工智能ETF(512930) 贪婪分17.36 进入低吸区（alla-tech）",
+      "code": "512930",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "通信ETF(515880) 贪婪分18.26 进入低吸区（alla-tech）",
+      "code": "515880",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "5G通信ETF(515050) 贪婪分24.19 进入低吸区（alla-tech）",
+      "code": "515050",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "科创芯片ETF(588200) 贪婪分24.85 进入低吸区（alla-tech）",
+      "code": "588200",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "半导体ETF(512480) 贪婪分26.95 进入低吸区（alla-tech）",
+      "code": "512480",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "中欧高端装备股票发起C(016848) 贪婪分32.33 进入低吸区（funds-greed）",
+      "code": "016848",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "平安中证卫星产业指数C(025491) 贪婪分32.84 进入低吸区（funds-greed）",
+      "code": "025491",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "中航军民融合精选C(004927) 贪婪分33.37 进入低吸区（funds-greed）",
+      "code": "004927",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "航空航天ETF(159227) 贪婪分35.04 进入低吸区（alla-tech）",
+      "code": "159227",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "科创50ETF易方达(588080) 贪婪分37.59 进入低吸区（alla-tech）",
+      "code": "588080",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "华夏科创50 ETF(588000) 贪婪分37.65 进入低吸区（alla）",
+      "code": "588000",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "汇添富中证光伏产业指数增强发起式C(013817) 贪婪分38.06 进入低吸区（funds-greed）",
+      "code": "013817",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "天弘中证全指通信设备指数发起C(020900) 贪婪分38.57 进入低吸区（funds-greed）",
+      "code": "020900",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "创业板50ETF(159949) 贪婪分39.1 进入低吸区（alla-tech）",
+      "code": "159949",
+      "date": null
+    },
+    {
+      "level": "info",
+      "source": "greed",
+      "text": "永赢上证科创板200指数C(026429) 贪婪分39.95 进入低吸区（funds-greed）",
+      "code": "026429",
+      "date": null
+    }
+  ],
+  "sources": [
+    "arkvol 贪婪指数（alla, alla-tech, funds-greed）",
+    "东方财富 DK 买卖点（人工导出 CSV）"
+  ],
+  "disclaimer": "信号来自 arkvol 贪婪指数与东方财富 DK 标记，仅供参考，非投资建议；arkvol 数据仅用于机会发现，不构成买入/卖出推荐。DK 买卖点为东方财富 App 图表信号，由用户人工导出，工具仅做变换识别，不代表任何交易建议。"
+}

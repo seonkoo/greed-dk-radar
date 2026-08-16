@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>贪婪指数 & DK 买卖点雷达</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1>贪婪指数 &amp; DK 买卖点雷达</h1>
+      <div class="meta">
+        <span id="greed-badge" class="badge badge-neutral">数据加载中…</span>
+        <span class="muted">生成于 <span id="gen-time">—</span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 合规提示：机会区本质为 ETF/指数/基金样本分位，非个股荐股 -->
+  <div id="compliance-banner" class="compliance-banner">
+    信号来自 arkvol 贪婪指数与东方财富 DK 标记，仅供参考、非投资建议；arkvol 数据仅用于机会发现，不构成买入/卖出推荐。
+  </div>
+
+  <main class="container">
+
+    <!-- 市场温度 -->
+    <section class="card">
+      <h2>市场温度</h2>
+      <div class="market-row">
+        <div class="market-item">
+          <span class="label">全市场状态</span>
+          <span id="market-state" class="value">—</span>
+        </div>
+        <div class="market-item">
+          <span class="label">数据日期</span>
+          <span id="data-date" class="value">—</span>
+        </div>
+      </div>
+      <p class="hint">贪婪指数来自 arkvol（全市场 / 科技 / 基金 ETF 三页），反映市场情绪分位。</p>
+    </section>
+
+    <!-- 告警汇总 -->
+    <section class="card">
+      <h2>告警汇总</h2>
+      <ul id="alerts" class="alert-list">
+        <li class="muted">加载中…</li>
+      </ul>
+    </section>
+
+    <!-- 贪婪机会区（ETF/指数/基金样本，非个股） -->
+    <section class="card">
+      <h2>贪婪机会区 <span class="sub">低吸区 · ETF/指数/基金样本</span></h2>
+      <div class="table-wrap">
+        <table id="opp-table">
+          <thead>
+            <tr><th>代码</th><th>名称</th><th>贪婪分</th><th>页面</th><th>标记</th></tr>
+          </thead>
+          <tbody id="opp-list">
+            <tr><td colspan="5" class="muted">加载中…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 贪婪风险区（过热） -->
+    <section class="card">
+      <h2>贪婪风险区 <span class="sub">过热 · ETF/指数/基金样本</span></h2>
+      <div class="table-wrap">
+        <table id="risk-table">
+          <thead>
+            <tr><th>代码</th><th>名称</th><th>贪婪分</th><th>页面</th><th>标记</th></tr>
+          </thead>
+          <tbody id="risk-list">
+            <tr><td colspan="5" class="muted">加载中…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- DK 事件流 -->
+    <section class="card">
+      <h2>DK 买卖点变换事件流 <span class="sub">由东方财富导出 CSV 识别</span></h2>
+      <ul id="dk-events" class="dk-list">
+        <li class="muted">暂无事件（请将东方财富 DK 导出 CSV 放入 data/dk/ 后重跑）</li>
+      </ul>
+    </section>
+
+    <!-- DK 当前状态 -->
+    <section class="card">
+      <h2>DK 当前状态 <span class="sub">各标的最后已知信号</span></h2>
+      <div class="table-wrap">
+        <table id="dk-latest-table">
+          <thead>
+            <tr><th>代码</th><th>名称</th><th>信号</th><th>日期</th><th>收盘</th></tr>
+          </thead>
+          <tbody id="dk-latest">
+            <tr><td colspan="5" class="muted">暂无数据</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 来源 -->
+    <section class="card sources">
+      <h2>数据来源</h2>
+      <ul id="sources" class="source-list">
+        <li class="muted">加载中…</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p id="disclaimer" class="disclaimer">—</p>
+    <p class="muted">本工具为信号汇总参考，不构成任何投资建议。投资有风险，决策需独立判断。</p>
+  </footer>
+
+  <noscript>
+    <div class="compliance-banner">本页面需要 JavaScript 加载 data.json 渲染；请启用 JS 或查看源数据文件 site/data.json。</div>
+  </noscript>
+
+  <script src="./app.js"></script>
+</body>
+</html>

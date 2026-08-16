@@ -1,0 +1,36 @@
+{
+  "greed": {
+    "pages": ["alla", "alla-tech", "funds-greed"],
+    "opportunity_threshold": 40,
+    "risk_threshold": 80,
+    "exclude_keywords": ["混合", "LOF", "联接", "债券"],
+    "etf_pages": ["funds-greed"],
+    "etf_scope": "宽基+行业+主题"
+  },
+  "arkvol": {
+    "base_url": "https://arkvol.com",
+    "skill_version": "0.3.1"
+  },
+  "dk": {
+    "csv_folder": "data/dk",
+    "state_file": "data/dk_state.json",
+    "signal_map": {
+      "D": "买点",
+      "K": "卖点"
+    }
+  },
+  "alert": {
+    "channels": ["dashboard"],
+    "webhook_url": null,
+    "webhook_levels": ["opportunity", "risk", "warning", "info"],
+    "only_dk": false
+  },
+  "schedule": {
+    "cron_minutes": 30,
+    "trading_hours": [9, 10, 11, 13, 14, 15],
+    "timezone": "Asia/Shanghai"
+  },
+  "paths": {
+    "output": "site/data.json"
+  }
+}
